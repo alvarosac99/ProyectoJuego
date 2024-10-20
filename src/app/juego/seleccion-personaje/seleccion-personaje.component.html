@@ -1,0 +1,15 @@
+<div class="character-container">
+    <button id="personajeNombreBoton" class="character-name-btn"
+        (click)="funcionMostrarTarjeta()">{{personajes[personajeSeleccion].nombre}}</button>
+
+    <img id="personajeImg" class="character-img" src={{personajes[personajeSeleccion].imagen}} />
+
+    <div class="characterNav">
+        <button id="prev-btn" (click)="prevPersonaje()">Anterior</button>
+        <button id="next-btn" (click)="nextPersonaje()">Siguiente</button>
+    </div>
+    <button id="botonEspecial" (click)="jugar()">JUGAR</button>
+</div>
+
+<app-tarjeta *ngIf="mostrarTarjeta" [seleccion]="personajes[personajeSeleccion]"
+    (cerrar)="funcionMostrarTarjeta()"></app-tarjeta>

@@ -1,0 +1,84 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Asegúrate de que el contenedor del sidenav ocupe toda la altura */
+mat-sidenav-container {
+  height: 100%;
+  position: relative;
+  /* Asegura que los elementos hijos se posicionen correctamente */
+  z-index: 1;
+  /* Z-index bajo para que el sidenav esté por encima */
+}
+
+/* Estilo para el sidenav */
+mat-sidenav {
+  width: 250px;
+  position: absolute;
+  /* Superpone el sidenav */
+  z-index: 10000;
+  /* Z-index alto para que esté sobre el contenido */
+}
+
+/* Estilo para la barra de herramientas */
+mat-toolbar {
+  background: #3f51b5;
+  color: white;
+}
+
+/* Estilo para los botones de la toolbar */
+mat-toolbar p {
+  margin: 5px;
+  cursor: pointer;
+}
+
+mat-toolbar p:hover {
+  transform: scale(1.125);
+  ;
+}
+
+/* Estilo para el contenido principal */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+/* Elementos del sidenav */
+mat-list-item {
+  cursor: pointer;
+  align-items: center;
+}
+
+/* Estilo para los enlaces dentro del sidenav */
+mat-list-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ajuste adicional para los iconos dentro de los enlaces */
+mat-list-item a mat-icon {
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes move-it {
+  0% {
+    background-position: initial;
+  }
+
+  100% {
+    background-position: 100px 0px;
+  }
+}
+
+mat-sidenav-content {
+  background: repeating-linear-gradient(135deg,
+      #884524ee,
+      #4b2513 20%,
+      #d3cf01 20%,
+      #eeb05b 50%);
+  background-size: 100px 100px;
+  animation: move-it 2s linear infinite;
+}

@@ -1,0 +1,61 @@
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    max-width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.overlay {
+    position: fixed;
+    /* Fija el overlay en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Cubre toda la pantalla */
+    height: 100%;
+    /* Cubre toda la pantalla */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro */
+    z-index: 1;
+    /* Debajo de la carta */
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    text-align: justify;
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,37 @@
+<body>
+  <mat-sidenav-container style="height: 100vh;">
+    <!-- Sidenav -->
+    <mat-sidenav #sidenav mode="over" opened="false">
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Sebastián Acosta</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>link</mat-icon>
+          <a href="https://github.com/alvarosac99" target="_blank">Mi página de GitHub</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+      <!-- Barra de herramientas -->
+      <mat-toolbar color="primary" class="fixed-toolbar">
+        <mat-toolbar-row>
+          <button mat-button color="primary" mat-icon-button (click)="toggleSidenav()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span class="spacer"></span>
+          <p mat-button routerLink="/juego">Juego</p>
+          <p mat-button routerLink="/loquesea">Coming Soon</p>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <!-- Contenido -->
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>

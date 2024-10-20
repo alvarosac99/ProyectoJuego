@@ -1,0 +1,8 @@
+ <h1>MAPAS</h1>
+<div class="container">
+    <img class="mapa" src={{mapas[0].imagen}} (click)="seleccion = 0; funcionMostrarTarjeta()">
+    <img class="mapa" src={{mapas[1].imagen}} (click)="seleccion = 1; funcionMostrarTarjeta()">
+    <img class="mapa" src={{mapas[2].imagen}} (click)="seleccion = 2; funcionMostrarTarjeta()">
+    <img class="mapa" src={{mapas[3].imagen}} (click)="seleccion = 3; funcionMostrarTarjeta()">
+</div>
+<app-tarjeta *ngIf="mostrarTarjeta" [seleccion]="mapas[seleccion]" (cerrar)="funcionMostrarTarjeta()"></app-tarjeta>
