@@ -15,17 +15,12 @@
 
 .overlay {
     position: fixed;
-    /* Fija el overlay en la pantalla */
     top: 0;
     left: 0;
     width: 100%;
-    /* Cubre toda la pantalla */
     height: 100%;
-    /* Cubre toda la pantalla */
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo oscuro */
     z-index: 1;
-    /* Debajo de la carta */
 }
 
 .image-container {

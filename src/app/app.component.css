@@ -1,21 +1,16 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-/* Asegúrate de que el contenedor del sidenav ocupe toda la altura */
 mat-sidenav-container {
   height: 100%;
   position: relative;
-  /* Asegura que los elementos hijos se posicionen correctamente */
   z-index: 1;
-  /* Z-index bajo para que el sidenav esté por encima */
 }
 
 /* Estilo para el sidenav */
 mat-sidenav {
   width: 250px;
   position: absolute;
-  /* Superpone el sidenav */
   z-index: 10000;
-  /* Z-index alto para que esté sobre el contenido */
 }
 
 /* Estilo para la barra de herramientas */
