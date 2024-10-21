@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../Personajes';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-seleccion-personaje',
   templateUrl: './seleccion-personaje.component.html',
   styleUrls: ['./seleccion-personaje.component.css']
 })
 export class SeleccionPersonajeComponent {
-  personajes: Personaje[] = [];
+  personajes: Personaje[] = new Array(Personaje.getCantidadPersonajes());
 
   personajeSeleccion = 0;
   mostrarTarjeta: boolean = false;
 
   // INICIO
   ngOnInit() {
-    for (let i = 0; i < 5; i++) {
-      this.personajes.push(new Personaje(i));
+    for (let i = 0; i < this.personajes.length; i++) {
+      this.personajes[i] = (new Personaje(i));
     }
   }
 
